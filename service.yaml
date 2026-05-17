@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: payment-api-svc
+  name: payment-api-svc
+spec:
+  ports:
+  - name: 80-8080
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: payment-api-svc
+  type: ClusterIP
+status:
+  loadBalancer: {}
