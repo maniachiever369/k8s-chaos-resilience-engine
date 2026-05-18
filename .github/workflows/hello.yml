@@ -4,4 +4,8 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "success, i build this pipeline"
+      - name: Clone Code to Server
+        uses: actions/checkout@v4
+
+      - name: List My Project Files
+        run: ls -la
