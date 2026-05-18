@@ -1,0 +1,7 @@
+name: my-first pipeline file
+on: [push]
+jobs: 
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "success, i build this pipeline"
