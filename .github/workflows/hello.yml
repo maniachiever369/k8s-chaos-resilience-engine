@@ -7,5 +7,7 @@ jobs:
       - name: Clone Code to Server
         uses: actions/checkout@v4
 
-      - name: List My Project Files
-        run: ls -la
+      - name: Audit Chaos Script
+        uses: koalaman/shellcheck-action@v2
+        with:
+          path: ./chaos-monkey.sh
